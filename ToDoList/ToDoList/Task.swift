@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ItemModel: Identifiable {
+struct Task: Identifiable {
     var id = UUID()
     var title: String
     var description: String?
