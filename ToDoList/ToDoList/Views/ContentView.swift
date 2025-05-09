@@ -8,25 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
-    var vm = ContentViewViewModel()
+    @State private var vm = TaskViewModel()
+    @State private var isAdding = false
     
     var body: some View {
         NavigationStack {
-            VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("Hello, world!")
+            List {
+                Text("String")
+                ForEach(vm.tasks) { task in
+                    Text(task.title)
+                }
             }
-            .padding()
+            .navigationTitle("To Do List")
             .toolbar {
                 ToolbarItem {
                     Button {
-                        
+                        isAdding.toggle()
                     } label: {
                         Image(systemName: "plus")
                     }
                 }
+            }
+            .sheet(isPresented: $isAdding) {
+                AddTextView()
             }
         }
         
