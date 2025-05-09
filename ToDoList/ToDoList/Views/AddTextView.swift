@@ -12,7 +12,7 @@ import SwiftUI
 // Save the task
 
 struct AddTextView: View {
-    @State private var vm = TaskViewModel()
+    @Binding  var vm: TaskViewModel
     
     @State private var title: String = ""
     @State private var description: String = ""
@@ -25,7 +25,8 @@ struct AddTextView: View {
             .navigationTitle("Add Task")
             .toolbar {
                 Button {
-                    vm.addTask(task: newTask())
+                    vm.addTask(task: newTask(title: title, description: description))
+                    print("Save that task")
                 } label: {
                     Text("Save")
                 }
@@ -33,11 +34,11 @@ struct AddTextView: View {
         }
         
     }
-    func newTask() -> Task {
+    func newTask(title: String, description: String) -> Task {
         Task(title: title, description: description)
     }
 }
 
-#Preview {
-    AddTextView()
-}
+//#Preview {
+//    AddTextView()
+//}

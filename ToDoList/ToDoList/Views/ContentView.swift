@@ -14,7 +14,6 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
-                Text("String")
                 ForEach(vm.tasks) { task in
                     Text(task.title)
                 }
@@ -30,7 +29,7 @@ struct ContentView: View {
                 }
             }
             .sheet(isPresented: $isAdding) {
-                AddTextView()
+                AddTextView(vm: $vm)
             }
         }
         
