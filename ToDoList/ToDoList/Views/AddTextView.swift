@@ -12,7 +12,8 @@ import SwiftUI
 // Save the task
 
 struct AddTextView: View {
-    @Binding  var vm: TaskViewModel
+    @Binding var vm: TaskViewModel
+    @Binding var isPresenting: Bool
     
     @State private var title: String = ""
     @State private var description: String = ""
@@ -26,6 +27,7 @@ struct AddTextView: View {
             .toolbar {
                 Button {
                     vm.addTask(task: newTask(title: title, description: description))
+                    isPresenting.toggle()
                     print("Save that task")
                 } label: {
                     Text("Save")

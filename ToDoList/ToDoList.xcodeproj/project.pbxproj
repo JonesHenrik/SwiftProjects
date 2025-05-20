@@ -15,6 +15,7 @@
 		58961AD62DCE3A0E003F20E1 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58961ACD2DCE3A0E003F20E1 /* TaskViewModel.swift */; };
 		58961AD72DCE3A0E003F20E1 /* ThinOpacityExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58961ACE2DCE3A0E003F20E1 /* ThinOpacityExample.swift */; };
 		58961AD82DCE3A0E003F20E1 /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58961ACF2DCE3A0E003F20E1 /* ToDoListApp.swift */; };
+		58961ADD2DCE7954003F20E1 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58961ADC2DCE7954003F20E1 /* TaskDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		58961ACD2DCE3A0E003F20E1 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		58961ACE2DCE3A0E003F20E1 /* ThinOpacityExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThinOpacityExample.swift; sourceTree = "<group>"; };
 		58961ACF2DCE3A0E003F20E1 /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
+		58961ADC2DCE7954003F20E1 /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		58D7B9B52DB294A100B5FD5D /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				58961ACB2DCE3A0E003F20E1 /* ContentView.swift */,
+				58961ADC2DCE7954003F20E1 /* TaskDetailView.swift */,
 				58961AC92DCE3A0E003F20E1 /* AddTextView.swift */,
 				58961ACE2DCE3A0E003F20E1 /* ThinOpacityExample.swift */,
 			);
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58961ADD2DCE7954003F20E1 /* TaskDetailView.swift in Sources */,
 				58961AD32DCE3A0E003F20E1 /* AddTextView.swift in Sources */,
 				58961AD42DCE3A0E003F20E1 /* ContentView.swift in Sources */,
 				58961AD52DCE3A0E003F20E1 /* Task.swift in Sources */,

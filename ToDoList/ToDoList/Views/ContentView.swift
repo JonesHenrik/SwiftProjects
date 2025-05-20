@@ -9,27 +9,40 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var vm = TaskViewModel()
-    @State private var isAdding = false
+    @State private var isPresenting = false
     
     var body: some View {
         NavigationStack {
             List {
                 ForEach(vm.tasks) { task in
-                    Text(task.title)
+                    NavigationLink {
+                        TaskDetailView(task: task)
+                    } label: {
+                        HStack {
+                            Text(task.title)
+                            Spacer()
+                            Image(systemName: task.isCompleted ? "checkmark.circle.fill" : "circle")
+                        }
+                    }
+                    .swipeActions(edge: .trailing) {
+                        Button("Complete") {
+                            task.isCompleted.toggle()
+                        }
+                    }
                 }
             }
             .navigationTitle("To Do List")
             .toolbar {
                 ToolbarItem {
                     Button {
-                        isAdding.toggle()
+                        isPresenting.toggle()
                     } label: {
                         Image(systemName: "plus")
                     }
                 }
             }
-            .sheet(isPresented: $isAdding) {
-                AddTextView(vm: $vm)
+            .sheet(isPresented: $isPresenting) {
+                AddTextView(vm: $vm, isPresenting: $isPresenting)
             }
         }
         
