@@ -24,6 +24,7 @@ struct TranslationView: View {
                 .frame(maxWidth: .infinity, maxHeight: 50, alignment: .topLeading)
                 .padding()
                 .background(Color(white: 0.9))
+                .translationPresentation(isPresented: $showingTranslation, text: text)
             
             Button {
                 showingTranslation = true
