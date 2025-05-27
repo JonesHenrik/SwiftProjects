@@ -22,9 +22,10 @@ struct TextRecognitionView: View {
                 }
             Spacer()
             
-            TranslationView(text: "")
+            TranslationView(text: textRecognizer?.recognizedText ?? "")
         }
         .padding()
+        .navigationTitle("Sign Info")
     }
 }
 
